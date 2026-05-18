@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f5f7fa;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Filters */
+.filters {
+  width: 300px;
+  background: white;
+  padding: 20px;
+}
+
+.filters input,
+.filters select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+}
+
+/* Results */
+.results {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Cards */
+.filter-card {
+  background: white;
+  padding: 15px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  height: 150px;
+  width: 250px;
+  line-height: 2;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+button{
+  padding: 8px 12px;
+  cursor: pointer;
+}

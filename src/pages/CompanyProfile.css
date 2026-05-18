@@ -1,0 +1,240 @@
+body {
+  background: #f4f6f8;
+  font-family: Arial;
+}
+
+.profile-container {
+  width: 500px;
+  margin: 50px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 40px 0 40px 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.company-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.company-header h2{
+  font-size: 25px;
+  color: #0b3d2e;
+}
+.logo {
+  border-radius: 50%;
+  width: 120px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.tabs button {
+  padding: 8px 15px;
+  border: none;
+  background: #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background: #0b3d2e;
+  color: white;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.tab-content h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.tab-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.tab-content ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gallery img {
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.cta {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: orange;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Products Section */
+.products-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+.product-card h4 {
+  margin: 0 0 8px 0;
+  color: #0b3d2e;
+}
+
+.product-card .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: orange;
+  margin: 5px 0;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
+}
+
+.product-btn {
+  width: 100%;
+  padding: 8px;
+  background: #0b3d2e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.product-btn:hover {
+  background: #082a1f;
+}
+
+/* Reviews Section */
+.reviews-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.review-card {
+  border-left: 4px solid orange;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-header strong {
+  color: #0b3d2e;
+}
+
+.rating {
+  font-size: 14px;
+}
+
+.review-card p {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-info {
+  margin-top: 15px;
+}
+
+.contact-item {
+  margin: 15px 0;
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 4px solid #0b3d2e;
+}
+
+.contact-item strong {
+  color: #0b3d2e;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-item p {
+  color: #555;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}

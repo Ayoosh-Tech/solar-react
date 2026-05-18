@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f4f6f9;
+}
+
+.admin-dashboard {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #0f172a;
+  color: white;
+  height: auto;
+  padding: 20px;
+}
+
+/* Main */
+.main1{
+  flex: 1;
+  padding: 20px;
+}
+
+.main1 h1{
+  color: #0b3d2e;
+}
+
+/* Card */
+.admin-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  height: fit-content;
+  background: white;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.admin-card h2{
+  color: #0b3d2e;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Buttons */
+button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.accept {
+  background: green;
+  color: white;
+  border-radius: 5px;
+}
+
+.decline {
+  background: red;
+  color: white;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.progress1 {
+  background: green;
+  color: white;
+  padding: 7px;
+  margin-bottom: 7px;
+  text-align: center;
+  height: 100%;
+}
+
+/* Bar Chart */
+.bar-chart {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  height: 150px;
+}
+
+.bar {
+  width: 40px;
+  background: #3b82f6;
+  text-align: center;
+  color: white;
+}
