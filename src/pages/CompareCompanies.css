@@ -1,0 +1,47 @@
+.compare-companies {
+  padding: 40px;
+  background: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+   .compare h2{
+    color: #0b3d2e;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+table{
+    width: 100%;
+    border-spacing: 20px;
+}
+
+thead th{
+    background: #0b3d2e;
+    color: white;
+    padding: 25px;
+}
+
+tbody td{
+    background: white;
+    padding: 25px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+  .compare h2 {
+    font-size: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-spacing: 10px;
+  }
+
+  thead th, tbody td {
+    padding: 15px;
+    font-size: 14px;
+  }
+}

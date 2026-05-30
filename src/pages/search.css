@@ -8,6 +8,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 /* Filters */
@@ -28,6 +29,7 @@ body {
 .results {
   flex: 1;
   padding: 20px;
+  width: 100%;
 }
 
 /* Cards */
@@ -54,3 +56,27 @@ button{
   padding: 8px 12px;
   cursor: pointer;
 }
+
+
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .filters {
+    width: 90%;
+   }
+   
+  .filter-card {
+    width: 90%;
+    height: auto;
+   }
+   
+  .top-bar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+    }

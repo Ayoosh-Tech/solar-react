@@ -60,19 +60,24 @@ button {
   padding: 5px 10px;
   border: none;
   cursor: pointer;
+
 }
 
 .accept {
   background: green;
   color: white;
   border-radius: 5px;
+  margin-bottom: 5px;
+  gap: 10px;
+  width: 100%;
 }
 
 .decline {
   background: red;
   color: white;
   border-radius: 5px;
-  margin-top: 5px;
+  margin-top: 10px;
+  width: 100%;
 }
 
 /* Progress Bar */
@@ -106,3 +111,53 @@ button {
   text-align: center;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .admin-card {
+    grid-template-columns: 1fr !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+   }
+
+   table {
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    }
+
+
+   .sidebar {
+    display: none;
+   }
+
+   .admin-dashboard {
+    flex-direction: column;
+   }
+
+   .main1 {
+    padding: 10px;
+   }
+
+   .bar-chart {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    gap: 5px;
+   }
+
+   .bar {
+    width: 100%;
+    transform: translateX(0);
+   }
+
+   .progress-bar {
+     height: auto;
+     transform: translateX(0);
+   }
+
+   .progress1 {
+     transform: translateX(0);
+     height: 100%;
+   }
+    }

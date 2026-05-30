@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { Routes, Route, NavLink } from 'react-router-dom';
+import { FaBars } from "react-icons/fa";
 import './App.css';
 import Login from './Login';
 import QuoteRequest from './pages/QuoteRequest';
@@ -6,16 +8,33 @@ import CompanyProfile from './pages/CompanyProfile';
 import CustomerDashboard from './pages/CustomerDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import Search from './pages/Search';
+import SolarCalculator from './pages/SolarCalculator';
+import CompareCompanies from './pages/CompareCompanies';
 import Register from './Register';
 import Footer from './components/Footer';
+import { useTranslation } from 'react-i18next';
+
+
+
 
 function Home() {
+  const { t, i18n } = useTranslation();
+
   return (
     <>
       <section className="hero">
-        <h2>Powering Solar Access Across Nigeria</h2>
-        <p>Find trusted solar companies and compare services easily</p>
-        <button>Explore Companies</button>
+        <h2>{t("heroTitle")}</h2>
+        <p>{t("heroText")}</p>
+        <button>{t("explore")}</button>
+        <div className="language-switcher">
+        <button  onClick={() => i18n.changeLanguage("en")}>
+        English
+      </button>
+
+      <button  onClick={() => i18n.changeLanguage("ha")}>
+        Hausa
+      </button>
+      </div>
       </section>
 
       <section className="companies">
@@ -45,27 +64,48 @@ function Home() {
   );
 }
 
-export default function App() {
+//export default function App() {
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleNavClick = () => setMenuOpen(false);
+  const handleOverlayClick = () => setMenuOpen(false);
+
   return (
     <div>
       {/* NAVBAR */}
       <header className="navbar">
         <h1 className="logo">SolarLink</h1>
 
-        <nav className="nav-links">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/quote">Quote</NavLink>
-          <NavLink to="/company">Company</NavLink>
-          <NavLink to="/dashboard">Dashboard</NavLink>
-          <NavLink to="/admin">Admin</NavLink>
-          <NavLink to="/search">Search</NavLink>
-          <NavLink to="/login">Login</NavLink>
-          <NavLink to="/register" className="btn">
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <FaBars />
+        </button>
+
+        <nav className={menuOpen ? "nav-links active" : "nav-links"}>
+          <NavLink to="/" onClick={handleNavClick}>Home</NavLink>
+          <NavLink to="/quote" onClick={handleNavClick}>Quote</NavLink>
+          <NavLink to="/company" onClick={handleNavClick}>Company</NavLink>
+          <NavLink to="/dashboard" onClick={handleNavClick}>Dashboard</NavLink>
+          <NavLink to="/admin" onClick={handleNavClick}>Admin</NavLink>
+          <NavLink to="/search" onClick={handleNavClick}>Search</NavLink>
+          <NavLink to="/calculator" onClick={handleNavClick}>Calculator</NavLink>
+          <NavLink to="/compare" onClick={handleNavClick}>Compare</NavLink>
+          <NavLink to="/login" onClick={handleNavClick}>Login</NavLink>
+          <NavLink to="/register" className="btn" onClick={handleNavClick}>
             Register
           </NavLink>
         </nav>
       </header>
 
+      {/* OVERLAY - closes menu when clicked */}
+      {menuOpen && (
+        <div className="menu-overlay" onClick={handleOverlayClick}></div>
+      )}
+      
       {/* ROUTES */}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -76,6 +116,8 @@ export default function App() {
         <Route path="/dashboard" element={<CustomerDashboard />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/calculator" element={<SolarCalculator />} />
+        <Route path="/compare" element={<CompareCompanies />} />
       </Routes>
 
       <footer className="footer">

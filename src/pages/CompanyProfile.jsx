@@ -17,6 +17,7 @@ export default function CompanyProfile() {
   const[selectedImage, setSelectedImage] = useState(null);
 
   return (
+    <main className="profile-page">
     <div className="profile-container">
       
       {/* Header */}
@@ -168,5 +169,6 @@ export default function CompanyProfile() {
       </button>
 
     </div>
+    </main>
   );
 }

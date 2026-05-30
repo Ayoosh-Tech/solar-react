@@ -13,6 +13,7 @@ export default function AdminDashboard() {
   };
 
   return (
+    
     <div className="admin-dashboard">
 
       {/* Sidebar */}
@@ -103,5 +104,6 @@ export default function AdminDashboard() {
 
       </main>
     </div>
+    
   );
 }

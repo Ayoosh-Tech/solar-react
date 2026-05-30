@@ -1,3 +1,9 @@
+html, body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +13,7 @@
 
 body {
   background-color: #f4f6f8;
+  overflow-x: hidden;
 }
 
 /*  NAVBAR */
@@ -15,13 +22,27 @@ body {
   justify-content: space-between;
   align-items: center;
   background: #0b3d2e;
-  padding: 20px;
+  padding: 15px 40px;
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.logo {
+  z-index: 1001;
+  position: relative;
+}
+
+.nav-links{
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .nav-links a{
   color: white;
-  margin-left: 20px;
   text-decoration: none;
   font-weight: 700;
 }
@@ -30,18 +51,38 @@ body {
   border-bottom: 2px solid orange;
 }
 
-.logo {
-  color: #fff;
+.hamburger{
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  z-index: 1002;
+  transition: transform 0.2s ease;
 }
 
-/*  HERO */
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+.hamburger:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
 .hero {
   text-align: center;
   padding: 100px 20px;
   background: url('https://images.unsplash.com/photo-1509391366360-2e959784a276')
     no-repeat center/cover;
   position: relative;
-  color: white;
+  color: white
 }
 
 .hero::before {
@@ -75,6 +116,28 @@ body {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+
+
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  gap: 20px;
+}
+
+button:hover {
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #0b3d2e;
+  color: white;
+  width: 80px;
+  height: 40px;
+  transition: 0.3s;
 }
 
 /*  COMPANIES */
@@ -173,16 +236,6 @@ body {
   color: white;
 }
 
-@media (max-width: 768px) {
-  .card-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar {
-    flex-direction: column;
-  }
-}
 .footer {
   text-align: center;
   padding: 20px;
@@ -191,4 +244,141 @@ body {
   margin-top: auto;
   display: flex;
   flex-direction: column;
+}
+
+
+/* Tablet & mobile*/
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    z-index: 1001;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    z-index: 1002;
+    transition: transform 0.2s ease;
+  }
+
+  .hamburger:hover {
+    transform: scale(1.1);
+  }
+
+  .hamburger:active {
+    transform: scale(0.95);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    bottom: 60px;
+    width: 250px;
+    height: auto; /*calc(100vh - 140px)*/
+    background: #0b3d2e;
+    padding-top: 20px;
+    padding-left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    display: block;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    border-left-color: orange;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links a.active {
+    border-left-color: orange;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .nav-links .btn {
+    background: orange;
+    color: white;
+    margin: 10px 20px;
+    border-radius: 8px;
+    padding: 12px 20px;
+  }
+
+  .menu-overlay {
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .hero{
+    height: auto;
+    padding: 60px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/* Small phone*/
+@media (max-width: 480px) {
+  .nav-links {
+    width: 220px;
+  }
+
+  .nav-links a {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
 }

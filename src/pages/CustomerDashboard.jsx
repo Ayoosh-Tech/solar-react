@@ -76,6 +76,7 @@ export default function CustomerDashboard() {
         </div>
 
         {/* Quotes */}
+        <main className="dashboard-main">
         <section className="main-card">
           <h2>📋 Active Quotes</h2>
 
@@ -128,7 +129,7 @@ export default function CustomerDashboard() {
             ))}
           </div>
         </section>
-
+</main>
       </main>
     </div>
   );

@@ -211,6 +211,8 @@ body {
   border-radius: 8px;
   border: 1px solid #ddd;
   transition: 0.3s;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .company-card:hover {
@@ -224,8 +226,8 @@ body {
 }
 
 .company-meta {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
   font-size: 12px;
   margin-bottom: 10px;
 }
@@ -299,6 +301,12 @@ body {
 @media (max-width: 768px) {
   .sidebar {
     display: none;
+  }
+  
+  .dashboard-main .main-card{
+    grid-template-columns: 1fr !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
   }
 
   .main {

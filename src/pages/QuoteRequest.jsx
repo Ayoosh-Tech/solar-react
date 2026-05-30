@@ -4,6 +4,8 @@ import './QuoteRequest.css';
 export default function QuoteRequest() {
   const [step, setStep] = useState(1);
   return (
+
+    <main className="quote-page">
     <div className="quote-container">
       <h2>Request a Solar Quote</h2>
 
@@ -55,5 +57,6 @@ export default function QuoteRequest() {
         )}
       </div>
     </div>
+  </main>
   );
 }

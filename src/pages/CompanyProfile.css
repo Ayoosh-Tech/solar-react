@@ -3,6 +3,14 @@ body {
   font-family: Arial;
 }
 
+.profile-page {
+  background: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
 .profile-container {
   width: 500px;
   margin: 50px auto;
@@ -11,6 +19,25 @@ body {
   border-radius: 40px 0 40px 0;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
+
+@media (max-width: 600px) {
+  .profile-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 45px 0 45px 0;
+  }
+
+  .tabs button {
+    padding: 6px 12px;
+    font-size: 12px;
+    width: 70px;
+    gap: 5px;
+    cursor: pointer;
+    left: 10px;
+    transform: translateX(0);
+      }
+     }
 
 .company-header {
   display: flex;
@@ -25,6 +52,7 @@ body {
 .logo {
   border-radius: 50%;
   width: 120px;
+  z-index: 1;
 }
 
 .tabs {
@@ -34,7 +62,7 @@ body {
 }
 
 .tabs button {
-  padding: 8px 15px;
+  padding: 8px 10px;
   border: none;
   background: #ddd;
   border-radius: 10px;
