@@ -101,6 +101,7 @@ button {
 .bar-chart {
   display: flex;
   gap: 10px;
+  justify-content: space-around;
   align-items: flex-end;
   height: 150px;
 }
@@ -140,15 +141,16 @@ button {
 
    .bar-chart {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: auto;
-    gap: 5px;
+    align-items: flex-end;
+    flex-direction: row;
+    height: 150px;
+    gap: 3px;
    }
 
    .bar {
-    width: 100%;
-    transform: translateX(0);
+    width: 40px;
+    flex-direction: row;
+    /*transform: translateX(0);*/
    }
 
    .progress-bar {
