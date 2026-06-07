@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route, NavLink, BrowserRouter } from 'react-router-dom';
 import { FaBars } from "react-icons/fa";
 import './App.css';
 import Login from './Login';
@@ -107,6 +107,7 @@ export default function Navbar() {
       )}
       
       {/* ROUTES */}
+      <main>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -119,10 +120,13 @@ export default function Navbar() {
         <Route path="/calculator" element={<SolarCalculator />} />
         <Route path="/compare" element={<CompareCompanies />} />
       </Routes>
+      </main>
 
       <footer className="footer">
         <p>&copy; 2026 SolarLink. All rights reserved.</p>
       </footer>
+      
     </div>
+  
   );
 }
