@@ -1,0 +1,36 @@
+{
+  "conversations": [
+    {
+      "id": 1,
+      "name": "SolarTech Ltd"
+    },
+    {
+      "id": 2,
+      "name": "GreenLight Solar"
+    }
+  ],
+
+  "messages": [
+    {
+      "id": 1,
+      "conversationId": 1,
+      "sender": "them",
+      "text": "Hello! How can we help you?",
+      "read": true
+    },
+    {
+      "id": 2,
+      "conversationId": 1,
+      "sender": "me",
+      "text": "I'd like a quote for a 3-bedroom house.",
+      "read": true
+    },
+    {
+      "id": 3,
+      "conversationId": 2,
+      "sender": "them",
+      "text": "Good afternoon. How may we assist you?",
+      "read": false
+    }
+  ]
+}
