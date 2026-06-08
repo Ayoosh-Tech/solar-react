@@ -45,7 +45,7 @@ export default function AdminDashboard() {
         {/* Quotes Table */}
         <section className="admin-card">
           <h2>Incoming Quotes</h2>
-
+       <div className="table-container">
           <table>
             <thead>
               <tr>
@@ -81,6 +81,7 @@ export default function AdminDashboard() {
               ))}
             </tbody>
           </table>
+          </div>
         </section>
 
         {/* Bar Chart */}

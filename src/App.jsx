@@ -13,6 +13,7 @@ import CompareCompanies from './pages/CompareCompanies';
 import Register from './Register';
 import Footer from './components/Footer';
 import { useTranslation } from 'react-i18next';
+import Chat from './pages/Chat';
 
 
 
@@ -94,6 +95,7 @@ export default function Navbar() {
           <NavLink to="/search" onClick={handleNavClick}>Search</NavLink>
           <NavLink to="/calculator" onClick={handleNavClick}>Calculator</NavLink>
           <NavLink to="/compare" onClick={handleNavClick}>Compare</NavLink>
+           <NavLink to="/Chat" onClick={handleNavClick}>Chat</NavLink>
           <NavLink to="/login" onClick={handleNavClick}>Login</NavLink>
           <NavLink to="/register" className="btn" onClick={handleNavClick}>
             Register
@@ -119,6 +121,7 @@ export default function Navbar() {
         <Route path="/search" element={<Search />} />
         <Route path="/calculator" element={<SolarCalculator />} />
         <Route path="/compare" element={<CompareCompanies />} />
+        <Route path="/chat" element={<Chat />} />
       </Routes>
       </main>
 
