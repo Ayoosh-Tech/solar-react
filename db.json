@@ -15,22 +15,19 @@
       "id": 1,
       "conversationId": 1,
       "sender": "them",
-      "text": "Hello! How can we help you?",
-      "read": true
+      "text": "Hello! How can we help you?"
     },
     {
       "id": 2,
       "conversationId": 1,
       "sender": "me",
-      "text": "I'd like a quote for a 3-bedroom house.",
-      "read": true
+      "text": "I'd like a quote for a 3-bedroom house."
     },
     {
       "id": 3,
       "conversationId": 2,
       "sender": "them",
-      "text": "Good afternoon. How may we assist you?",
-      "read": false
+      "text": "Good afternoon. How may we assist you?"
     }
   ]
 }

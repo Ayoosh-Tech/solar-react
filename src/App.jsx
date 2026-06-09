@@ -10,10 +10,11 @@ import AdminDashboard from './pages/AdminDashboard';
 import Search from './pages/Search';
 import SolarCalculator from './pages/SolarCalculator';
 import CompareCompanies from './pages/CompareCompanies';
+import Chat from './pages/Chat';
 import Register from './Register';
 import Footer from './components/Footer';
 import { useTranslation } from 'react-i18next';
-import Chat from './pages/Chat';
+
 
 
 
